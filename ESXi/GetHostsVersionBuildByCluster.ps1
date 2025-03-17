@@ -2,8 +2,7 @@
 
 $vcenter = Read-Host "Enter vCenter"
 $credential = Get-Credential
-Connect-VIServer $vcenter -Credential $credential #-AllLinked -Force [Remove # if working with multiple vCenters in linked mode]
-
+Connect-VIServer $vcenter -Credential $credential #-AllLinked -Force #[Remove # before -AllLinked if working with multiple vCenters in linked mode]
 $Clusters = Get-Cluster
 foreach ($Cluster in $Clusters)
 {

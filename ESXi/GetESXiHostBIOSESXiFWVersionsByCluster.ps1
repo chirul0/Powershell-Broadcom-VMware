@@ -22,5 +22,6 @@ Get-Cluster -PipelineVariable cluster |
               @{N = 'NIC FW Version'; E = { $_.DriverInfo.FirmwareVersion }},
               @{N = 'RAID FW Version'; E = { $esxcli.storage.san.sas.list.invoke().FirmwareVersion }} 
             }
-      } | Sort-Object -Property "ESXi Host" | Format-Table -AutoSize -Wrap #Change Property value to sort by a different attribute
+      } | Sort-Object -Property "ESXi Host" | #Change Property value to sort by a different attribute
+        Format-Table -AutoSize -Wrap 
     } 

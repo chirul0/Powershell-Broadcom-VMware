@@ -6,10 +6,10 @@ $Clusters = Get-Cluster
   
   foreach ($Cluster in $Clusters) {
   
-  Write-Host "## #####" $Cluster "##### ##"
-  $Cluster | Get-VMHost | 
-  Select-Object @{Label = "Host"; Expression = { $_.Name }} | 
-  Sort-Object -Property Host | 
-  Format-Table -AutoSize -Wrap
+    Write-Host "## #####" $Cluster "##### ##"
+    $Cluster | Get-VMHost | 
+    Select-Object @{Label = "Host"; Expression = { $_.Name }} | 
+    Sort-Object -Property Host | 
+    Format-Table -AutoSize -Wrap
 
 }

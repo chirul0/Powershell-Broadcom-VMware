@@ -3,6 +3,7 @@ $credential = Get-Credential
 Connect-VIServer $vcenter -Credential $credential #-AllLinked -Force [Remove # if using multiple vCenters in linked mode]
 
 $Clusters = Get-Cluster
+  
   foreach ($Cluster in $Clusters) {
   
   Write-Host "## #####" $Cluster "##### ##"

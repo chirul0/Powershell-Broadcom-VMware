@@ -12,4 +12,4 @@ $Clusters = Get-Cluster
     Sort-Object -Property Host | 
     Format-Table -AutoSize -Wrap
 
-}
+  }
